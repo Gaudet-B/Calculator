@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div id="calculator">
+        <div id="display">0</div>
+        <div class="row">
+          <button onmousedown="mouseDown(this)" onmouseup="mouseUp(this)" onclick="press(this);">7</button>
+          <button onmousedown="mouseDown(this)" onmouseup="mouseUp(this)" onclick="press(this);">8</button>
+          <button onmousedown="mouseDown(this)" onmouseup="mouseUp(this)" onclick="press(this);">9</button>
+          <button onmousedown="mouseDown(this)" onmouseup="operatorUp(this)" class="operator" onclick="setOP('/');">÷</button>
+        </div>
+        <div class="row">
+          <button onmousedown="mouseDown(this)" onmouseup="mouseUp(this)" onclick="press(this);">4</button>
+          <button onmousedown="mouseDown(this)" onmouseup="mouseUp(this)" onclick="press(this);">5</button>
+          <button onmousedown="mouseDown(this)" onmouseup="mouseUp(this)" onclick="press(this);">6</button>
+          <button onmousedown="mouseDown(this)" onmouseup="operatorUp(this)" class="operator" onclick="setOP('*');">×</button>
+        </div>
+        <div class="row">
+          <button onmousedown="mouseDown(this)" onmouseup="mouseUp(this)" onclick="press(this);">1</button>
+          <button onmousedown="mouseDown(this)" onmouseup="mouseUp(this)" onclick="press(this);">2</button>
+          <button onmousedown="mouseDown(this)" onmouseup="mouseUp(this)" onclick="press(this);">3</button>
+          <button onmousedown="mouseDown(this)" onmouseup="operatorUp(this)" class="operator" onclick="setOP('-');">−</button>
+        </div>
+        <div class="row">
+          <button onmousedown="mouseDown(this)" onmouseup="compUp(this)" id="clear" onclick="clr();">C</button>
+          <button onmousedown="mouseDown(this)" onmouseup="mouseUp(this)" onclick="press(this);">0</button>
+          <button onmousedown="mouseDown(this)" onmouseup="mouseUp(this)" onclick="press('.');">.</button>
+          <button onmousedown="mouseDown(this)" onmouseup="operatorUp(this)" class="operator" onclick="setOP('+');">+</button>
+        </div>
+        <div class="row">
+          <button id="equals" onmousedown="mouseDown(this)" onmouseup="compUp(this)" onclick="calculate()">=</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
